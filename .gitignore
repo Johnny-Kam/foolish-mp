@@ -1,0 +1,20 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.DS_Store
+
+foolish-mp-app/node_modules/
+foolish-mp-app/dist/
+foolish-mp-app/npm-debug.log*
+foolish-mp-app/yarn-debug.log*
+foolish-mp-app/yarn-error.log*
+
+
