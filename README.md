@@ -39,26 +39,14 @@
         ├─package.json # 包文件
         ├─project.config.json # 项目配置
         ├─static # 静态目录,编译后会复制到小程序根目录下
-        |   ├─.gitkepp
-        |   ├─iview # iview weApp 组件
         ├─src #源文件
         |  ├─App.vue # 相当于app.js
         |  ├─app.json # app配置
         |  ├─main.js # vue配置
+        |  ├─api # 接口相关
         |  ├─utils # 工具包
-        |  |   ├─.gitkepp
-        |  |   └flyConfig.js # fly配置
         |  ├─pages # 页面
-        |  |   ├─mine
-        |  |   |  ├─index.vue
-        |  |   |  ├─main.js
-        |  |   |  └main.json
-        |  |   ├─index
-        |  |   |   ├─index.vue
-        |  |   |   ├─main.js
-        |  |   |   └main.json
         |  ├─components # 自定义组件
-        |  |     └.gitkepp
         ├─config # 配置文件
         |   ├─dev.env.js
         |   ├─index.js
@@ -83,7 +71,20 @@
 ```
 
 ##### **Fly.JS 使用**
-
+```$xslt
+    #配置src/api/flyConfig.js
+    
+    #接口服务src/api/apiService.js
+    
+    #页面引入api服务  import apiService from '../../api/apiService';
+    
+    #调用
+        apiService.testAPI((res)=>{
+            //res
+        }).catcg((err)=>{
+            //err
+        })
+```
 
 ##### **Router 使用**
 ```$xslt
