@@ -98,3 +98,69 @@
      
      
 ```
+
+
+
+#### foolish-mp-service
+
+- 基础框架: Sails JS https://sailsjs.com/
+- 数据库: MongoDB
+
+
+- 本地环境配置 config/local.js (自建)
+```$xslt
+    
+    #安装Salis-mongo依赖
+        npm install sails-mongo -S
+    
+    # 参考示例
+    module.exports = {
+      // 设定端口 
+      port: 7878
+    
+    };
+    
+    module.exports.datastores = {
+    
+      mongoDataSource: {
+        /***************************************************************************
+         *
+         * MongoDB创建数据库步骤
+         * 1. 创建数据库 foolish_mp_db
+         *
+         * 2. 创建数据库用户
+         *     db.createUser({
+         *          user: "admin",
+         *          pwd: "password",
+         *          roles: [ { role: "root", db: "admin" } ]
+         *      });
+         ***************************************************************************/
+    
+        adapter: require('sails-mongo'),
+        url: 'mongodb://username:password@host:port/database'
+      }
+    
+    }
+   
+```
+
+- 运行与发布
+```$xslt
+    
+    #进入项目
+      
+        cd foolish-mp-service
+    
+    #安装项目依赖
+        
+        npm install
+        
+    #开发项目
+        
+        Sails Js
+    
+    #生产部署
+        
+        npm run start
+   
+```
