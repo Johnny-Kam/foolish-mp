@@ -157,7 +157,7 @@
         
     #开发项目
         
-        Sails Js
+        sails lift
     
     #生产部署
         
